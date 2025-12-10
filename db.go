@@ -114,7 +114,6 @@ func (db *DB) recover() error {
 
 		// 3. Decode header to get sizes
 		// We can reuse the Decode logic or just peek at the bytes manually
-		// (For simplicity, let's peek manually using the same logic as Decode)
 		// We need the sizes to know how much more to read
 		// Recall: [0-4] is KeySize, [4-8] is ValSize
 		
@@ -151,4 +150,5 @@ func (db *DB) recover() error {
 // Close ensures we close the file handle
 func (db *DB) Close() {
 	db.file.Close()
+
 }
