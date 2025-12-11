@@ -1,5 +1,6 @@
 # ApexKV
 
+[![ApexKV CI](https://github.com/parthbhanti22/ApexKV/actions/workflows/go.yml/badge.svg)](https://github.com/parthbhanti22/ApexKV/actions/workflows/go.yml)
 ![Go Version](https://img.shields.io/badge/go-1.22+-00ADD8?style=flat&logo=go)
 ![Architecture](https://img.shields.io/badge/architecture-distributed-orange)
 ![License](https://img.shields.io/badge/license-MIT-green)
