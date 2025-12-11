@@ -14,7 +14,7 @@ It implements the **Raft Consensus Algorithm** to guarantee strong consistency (
 
 *The screenshot below demonstrates the system's ability to auto-recover. When the Leader node (running on port 9001) is killed mid-operation, the cluster detects the failure, holds an election, and seamlessly redirects traffic to the new Leader (port 9002) with zero data loss.*
 
-![Chaos Monkey Test Result](crashtest.png)
+![Chaos Monkey Test Result](crashtest.PNG)
 *(Note: To view this image, ensure a file named `crashtest.png` exists in the repository root.)*
 
 ---
