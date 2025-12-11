@@ -1,0 +1,32 @@
+name: ApexKV CI
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+
+  build:
+    name: Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Go
+      uses: actions/setup-go@v4
+      with:
+        go-version: '1.22'
+
+    - name: Verify Dependencies
+      run: go mod verify
+
+    - name: Build Project
+      run: go build -v ./...
+
+    - name: Run Unit Tests
+      # This runs any file ending in _test.go
+      # If you haven't written standard unit tests yet, this will just pass nicely.
+      run: go test -v ./...
